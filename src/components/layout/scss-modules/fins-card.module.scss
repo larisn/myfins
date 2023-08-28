@@ -1,0 +1,182 @@
+
+@import "../../../assets/abstracts/mixins.scss";
+@import "../../../assets/abstracts/reset.scss";
+@import "../../../assets/abstracts/variables.scss";
+
+
+.containerFins {
+  word-wrap: break-word;
+  @include responsive-tablet {
+    @include flexbox-center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 3rem;
+  }
+  @include responsive-desktop2 {
+    @include flexbox-center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  h5 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    color: $second-main-color;
+    margin-top: 10rem;
+    @include responsive-small-phone {
+      font-size: 2.5rem;
+      margin-top: 6rem;
+    }
+  }
+}
+
+.contentFins {
+  background-color: $green2;
+  border: 3px solid #75b382;
+  box-shadow: 5px 4px 11px 0px #86ad8e34;
+  width: 330px;
+  height: 310px;
+  padding: 30px 20px 30px 30px;
+  margin: 3rem auto;
+  text-align: center;
+  border-radius: 30px;
+  overflow: scroll;
+  h2 {
+    text-align: center;
+    color: $second-main-color;
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+    @include responsive-small-phone {
+      font-size: 2.4rem;
+    }
+  }
+  h3 {
+    color: $gray2;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 2.5rem;
+    border-top: 1px solid rgba(7, 66, 5, 0.137);
+    padding-top: 2.5rem;
+    span:nth-child(1) {
+      color: $gray2;
+      font-size: 2rem;
+      text-align: left;
+      @include responsive-small-phone {
+        font-size: 1.8rem;
+      }
+    }
+    span:nth-child(2) {
+      font-weight: 500;
+    }
+    @include responsive-small-phone {
+      font-size: 1.8rem;
+    }
+  }
+  div {
+    display: inline-flex;
+    gap: 25px;
+    @include responsive-small-phone {
+      gap: 15px;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include responsive-small-phone {
+    margin: 2rem auto 2rem auto;
+    width: 290px;
+    height: 300px;
+  }
+  @include responsive-tablet {
+    width: 350px;
+    height: 310px;
+    margin: 0;
+  }
+  @include responsive-desktop {
+    width: 350px;
+    height: 320px;
+    margin: 3rem 0 3rem 0;
+  }
+  @include responsive-desktop2 {
+    height: 325px;
+    margin: 3rem 0 3rem 0;
+  }
+}
+
+.categoryText {
+  color: $gray2;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 2.5rem;
+  @include responsive-small-phone {
+    font-size: 1.8rem;
+  }
+  span {
+    display: inline-block;
+    margin-right: 8px;
+    transform: translateY(1px);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+  }
+  .Educação {
+    background-color: $yellow;
+  }
+  .Doméstica {
+    background-color: $pink;
+  }
+  .Médica {
+    background-color: $red;
+  }
+  .Pessoal {
+    background-color: $purple;
+  }
+  .Investimento {
+    background-color: $blue;
+  }
+  .Transporte {
+    background-color: $orange;
+  }
+  .Lazer {
+    background-color: $green;
+  }
+  .Alimentação {
+    background-color: $purple2;
+  }
+}
+
+.containerIcons {
+  margin-top: 1rem;
+  a, button {
+    display: inline-block;
+    color: $green1;
+    font-size: 1.6rem;
+    background: $greenGradient2;
+    padding: 11px;
+    width: 115px;
+    border-radius: 25px;
+    @include responsive-small-phone {
+      width: 100px;
+    }
+    &:hover {
+      transition: all .2s ease-in-out;
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+  }
+  div {
+    transform: translateY(2px);
+    margin-right: 3px;
+  }
+  @include responsive-small-phone {
+    margin-top: 1rem;
+  }
+  @include responsive-desktop {
+    margin-top: 2.5rem;
+  }
+}
+

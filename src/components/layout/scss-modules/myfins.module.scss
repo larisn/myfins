@@ -1,0 +1,122 @@
+
+@import "../../../assets/abstracts/mixins.scss";
+@import "../../../assets/abstracts/reset.scss";
+@import "../../../assets/abstracts/variables.scss";
+
+
+section {
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: $second-main-color;
+    margin: 4rem 0 3rem 0rem;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 4px;
+      width: 60px;
+      background: $greenGradient;
+      bottom: 6px;
+      @include responsive-small-phone {
+        bottom: 4px;
+      }
+      @include responsive-tablet {
+        width: 90px;
+        bottom: 12px;
+      }
+      @include responsive-desktop {
+        bottom: 9px;
+        width: 80px;
+      }
+      @include responsive-desktop2 {
+        width: 80px;
+        bottom: 11px;
+      }
+    }
+    @include responsive-small-phone {
+      margin-top: 2rem;
+      font-size: 2.5rem;
+    }
+    @include responsive-tablet {
+      margin-top: 8rem;
+      font-size: 5rem;
+    }
+    @include responsive-desktop {
+      font-size: 4rem;
+      margin-top: 5rem;
+    }
+    @include responsive-desktop2 {
+      font-size: 4.5rem;
+      margin-top: 8rem;
+    }
+  }
+}
+
+.containerTitle {
+  text-align: center;
+  @include responsive-desktop {
+    @include flexbox-between;
+    margin: 0 10rem;
+  }
+  @include responsive-desktop2 {
+    margin: 0 7rem;
+  }
+}
+
+.tree2 {
+  position: fixed;
+  width: 100%;
+  height: 700px;
+  z-index: -1;
+  object-fit: cover;
+  @include responsive-tablet {
+    display: block;
+    height: 800px;
+    object-fit: fill;
+  }
+  @include responsive-desktop {
+    left: 350px;
+    height: 680px;
+    margin: 0% 4%;
+  }
+  @include responsive-desktop2 {
+    height: 790px;
+  }
+}
+
+.plant {
+  display: none;
+  @include responsive-desktop {
+    display: block;
+    position: fixed;
+    width: 100%;
+    left: 500px;
+    top: 550px;
+    height: 180px;
+    z-index: -1;
+    object-fit: fill;
+    margin: 0% 4%;
+  }
+  @include responsive-desktop2 {
+    left: 600px;
+    top: 680px;
+    height: 180px;
+  }
+}
+
+.womanNewFins {
+  display: none;
+  @include responsive-desktop {
+    display: block;
+    position: fixed;
+    width: 800px;
+    height: 635px;
+    z-index: -1;
+    object-fit: fill;
+  }
+  @include responsive-desktop2 {
+    width: 890px;
+    height: 780px;
+  }
+}

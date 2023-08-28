@@ -1,0 +1,20 @@
+
+@import "../../../assets/abstracts/mixins.scss";
+@import "../../../assets/abstracts/reset.scss";
+@import "../../../assets/abstracts/variables.scss";
+
+.container {
+  @include container();
+  @include responsive-desktop {
+    @include container2();
+  }
+}
+
+.minHeight {
+  max-width: 100vw;
+  min-height: 68vh;
+  @include responsive-tablet {
+    min-height: 78vh;
+  }
+}
+

@@ -1,0 +1,14 @@
+
+@import "../../../assets/abstracts/mixins.scss";
+
+.form {
+  width: 70%;
+  margin: 3rem auto 0 auto;
+  @include responsive-small-phone {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+  @include responsive-desktop2 {
+    width: 60%;
+  }
+}

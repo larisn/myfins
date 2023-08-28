@@ -1,0 +1,37 @@
+{
+  "fins": [],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Educação"
+    },
+    {
+      "id": 2,
+      "name": "Doméstica"
+    },
+    {
+      "id": 3,
+      "name": "Médica"
+    },
+    {
+      "id": 4,
+      "name": "Pessoal"
+    },
+    {
+      "id": 5,
+      "name": "Transporte"
+    },
+    {
+      "id": 6,
+      "name": "Investimento"
+    },
+    {
+      "id": 7,
+      "name": "Lazer"
+    },
+    {
+      "id": 8,
+      "name": "Alimentação"
+    }
+  ]
+}

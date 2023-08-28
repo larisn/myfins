@@ -1,0 +1,39 @@
+
+@import "../../../assets/abstracts/mixins.scss";
+@import "../../../assets/abstracts/reset.scss";
+@import "../../../assets/abstracts/variables.scss";
+
+.submitButton {
+  background: $greenGradient2;
+  color: $green1;
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 11px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 40px;
+  &:hover {
+    filter: brightness(1.1);
+    transition: all .2s ease-in-out;
+    transform: scale(1.05);
+  }
+  @include responsive-small-phone {
+    padding: .8rem;
+    font-size: 1.3rem;
+    width: 120px;
+    margin-top: 1rem;
+  }
+  @include responsive-tablet {
+    width: 200px;
+    font-size: 2.2rem;
+    margin-top: 2rem;
+  }
+  @include responsive-desktop {
+    width: 160px;
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+  }
+  @include responsive-desktop2 {
+    margin-top: 3rem;
+  }
+}

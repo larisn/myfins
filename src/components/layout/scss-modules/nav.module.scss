@@ -1,0 +1,129 @@
+
+@import "../../../assets/abstracts/mixins.scss";
+@import "../../../assets/abstracts/reset.scss";
+@import "../../../assets/abstracts/variables.scss";
+
+
+.nav {
+  @include responsive-desktop2 {
+    @include container();
+    width: 100%;
+  }
+  display: flex;
+  padding: 3rem 3rem 2rem 3rem;
+  @include responsive-desktop {
+    padding: 3rem 5rem;
+  }
+  @include responsive-desktop2 {
+    padding: 2.8rem;
+    padding-bottom: 0;
+  }
+  img {
+    width: 150px;
+    @include responsive-desktop {
+      width: 180px;
+    }
+  }
+}
+
+.containerNav {
+  @include flexbox-between;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  right: 145px;
+  display: none;
+  @include responsive-tablet {
+    display: block;
+  }
+}
+
+.list {
+  @include align-center;
+  gap: 30px;
+  a {
+    display: none;
+    @include responsive-desktop {
+      display: block;
+      color: $second-main-color;
+      font-size: 1.7rem;
+      font-weight: 600;
+      &:hover {
+        color: $green3;
+        transition: color .2s;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.navMobile {
+  div {
+    margin: 6px 0;
+    width: 28px;
+    height: 2px;
+    background-color: #313045;
+    transition: 0.4s;
+  }
+  @include responsive-desktop {
+    display: none;
+  }
+}
+
+.navMobileActive {
+  .div1 {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  .div2 {
+    opacity: 0;
+  }
+  .div3 {
+    transform: rotate(-46deg) translate(3px, -4px);
+  }
+}
+
+.navMobileOptions {
+  display: none;
+}
+
+.navMobileOptionsActive {
+  display: block;
+  height: 100vh;
+  background: radial-gradient(ellipse at center, $white1 0%, $white2 50%, 100%);
+  a {
+    color: $second-main-color;
+    font-size: 2rem;
+    font-weight: 600;
+    &:hover {
+      color: $green3;
+      transition: color .2s;
+      text-decoration: underline;
+    }
+    @include responsive-tablet {
+      font-size: 2.8rem;
+    }
+  }
+  li {
+    font: 500 21px 'Inter';
+    text-align: center;
+    &:first-child {
+      margin-top: 80px;
+      @include responsive-small-phone {
+        margin-top: 35px;
+      }
+    }
+    padding-bottom: 50px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

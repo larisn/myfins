@@ -1,0 +1,75 @@
+
+@import "../../../assets/abstracts/mixins.scss";
+@import "../../../assets/abstracts/reset.scss";
+@import "../../../assets/abstracts/variables.scss";
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.2rem;
+  @include responsive-desktop {
+    margin-bottom: 1.5rem;
+  }
+  @include responsive-desktop2 {
+    margin-bottom: 3rem;
+  }
+  label {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: $second-main-color;
+    @include responsive-small-phone {
+      font-size: 1.5rem;
+    }
+    @include responsive-tablet {
+      font-size: 3rem;
+      &:first-child {
+        margin-top: 2rem;
+      }
+    }
+    @include responsive-desktop {
+      font-size: 2rem;
+      &:first-child {
+        margin-top: 1rem;
+      }
+    }
+    @include responsive-desktop2 {
+      font-size: 2.3rem;
+    }
+  }
+  input {
+    padding: 1.3rem;
+    border-radius: 9px;
+    border: 2px solid #9dc7a6;
+    background-color: transparent;
+    &::placeholder {
+      color: $gray4;
+      font-weight: 600;
+      padding: 5px;
+    }
+    &:focus {
+      outline: none;
+      background-color: $white3;
+      border: 2px solid $main-color;
+    }
+    &[type="number"]::before {
+      content: "R$ ";
+    }
+    @include responsive-small-phone {
+      padding: .5rem;
+    }
+    @include responsive-tablet {
+      font-size: 2.2rem;
+    }
+    @include responsive-desktop {
+      font-size: 1.6rem;
+    }
+    @include responsive-desktop2 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.formError {
+  border: 2px solid rgb(255, 52, 52);
+}

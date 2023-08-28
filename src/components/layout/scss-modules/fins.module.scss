@@ -1,0 +1,398 @@
+
+@import "../../../assets/abstracts/mixins.scss";
+@import "../../../assets/abstracts/reset.scss";
+@import "../../../assets/abstracts/variables.scss";
+
+
+div {
+  .containerTitle, .containerTitle1 {
+    text-align: center;
+    border-top: 1px solid rgba(7, 66, 5, 0.363);
+    width: 87%;
+    margin: 3rem auto;
+    @include responsive-small-phone {
+      margin: 0 auto;
+    }
+    @include responsive-desktop {
+      margin: 0 auto;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    
+    h1 {
+      font-size: 2.6rem;
+      color: $second-main-color;
+      margin: 4rem 0 3rem 0rem;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 45px;
+        background: $greenGradient;
+        bottom: 5px;
+        @include responsive-small-phone {
+          bottom: 5px;
+        }
+        @include responsive-tablet {
+          width: 70px;
+          height: 5px;
+          bottom: 8px;
+        }
+        @include responsive-desktop {
+          height: 4px;
+          bottom: 9px;
+        }
+      }
+      @include responsive-small-phone {
+        margin-top: 2rem;
+        font-size: 2.5rem;
+      }
+      @include responsive-tablet {
+        margin-top: 8rem;
+        font-size: 4rem;
+      }
+      @include responsive-desktop {
+        font-size: 4rem;
+        margin: 0;
+        width: 100%;
+        margin-top: 5rem;
+      }
+      @include responsive-desktop2 {
+        font-size: 4.3rem;
+        margin-top: 5rem;
+        margin-bottom: 0;
+      }
+    }
+    button {
+      background: $greenGradient2;
+      padding: 10px;
+      width: 130px;
+      border-radius: 25px;
+      color: $green1;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      &:hover {
+        filter: brightness(1.1);
+        transform: scale(1.05);
+        transition: all .2s ease-in-out;
+      }
+      @include responsive-small-phone {
+        width: 130px;
+        padding: 10px;
+        margin-bottom: 4rem;
+      }
+      @include responsive-tablet {
+        width: 140px;
+        margin-bottom: 6rem;
+        font-size: 2rem;
+      }
+      @include responsive-desktop {
+        width: 150px;
+        font-size: 1.8rem;
+        margin-top: 4.5rem;
+        margin-bottom: 0;
+      }
+    }
+    @include responsive-tablet {
+      text-align: center;
+    }
+    @include responsive-desktop {
+      @include flexbox-between;
+      text-align: left;
+      padding-bottom: 4rem;
+    }
+  }
+  
+  .containerTitle1 {
+    border: none;
+  }
+
+  .containerDetails {
+    margin: 0 auto;
+    width: 85%;
+    p {
+      margin-bottom: 2rem;
+      width: 100%;
+      &:last-child {
+        padding-bottom: 2rem;
+        
+        @include responsive-small-phone {
+          padding-bottom: 2rem;
+        }
+        @include responsive-desktop {
+          padding-bottom: 0;
+          margin-bottom: 6rem;
+        }
+      }
+      span:nth-child(1) {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $second-main-color;
+        margin-right: 10px;
+        @include responsive-tablet {
+          font-size: 2.5rem;
+        }
+        @include responsive-desktop {
+          font-size: 2.2rem;
+        }
+      }
+      span:nth-child(2) {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: $gray2;
+        @include responsive-tablet {
+          font-size: 2.5rem;
+        }
+        @include responsive-desktop {
+          font-size: 2.2rem;
+        }
+      }
+      @include responsive-tablet {
+        margin-bottom: 2.5rem;
+      }
+    }
+    @include responsive-tablet {
+      margin: 0 auto;
+      width: 85%;
+    }
+    @include responsive-desktop {
+      margin-top: 2rem;
+      width: 87%;
+    }
+  }
+}
+
+.finsInfo {
+  width: 85%;
+  margin: 0 auto;
+  @include responsive-small-phone {
+    padding-bottom: 4rem;
+  }
+  @include responsive-desktop {
+    width: 50%;
+    margin: 3rem 11.8rem 7rem 8.5rem;
+  }
+  @include responsive-desktop2 {
+    width: 45%;
+    margin: 3rem 11.8rem 7rem 10.5rem;
+  }
+  label {
+    @include responsive-small-phone {
+      font-size: 1.5rem;
+      margin: 1rem;
+    }
+    @include responsive-tablet {
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
+    @include responsive-desktop {
+      font-size: 2rem;
+    }
+    @include responsive-desktop2 {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+.containerTitle {
+  h1 {
+    @include responsive-tablet {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.details {
+  .containerTitle {
+    h1 {
+      margin: 3rem auto 3rem auto;
+      @include responsive-small-phone {
+        &::before {
+          bottom: 39px;
+        }
+      }
+      @include responsive-tablet {
+        margin-bottom: 5rem;
+      }
+      @include responsive-desktop {
+        width: 100%;
+        margin: 0;
+      }
+    }
+    button {
+      @include responsive-desktop {
+        margin-top: 0;
+      }
+    }
+    @include responsive-small-phone {
+      width: 85%;
+    }
+  }
+  div:nth-child(2) {
+    margin: 0 auto;
+    @include responsive-small-phone {
+      &:last-child {
+        margin-bottom: 2rem;
+      } 
+    }
+    @include responsive-desktop {
+      margin: 3rem 11.8rem 7rem 10.5rem;
+    }
+    
+  }
+  div:nth-child(3) {
+    margin: 0 auto;
+    @include responsive-tablet {
+      margin: 0;
+    }
+    div {
+      padding-bottom: 0;
+    }
+    h1 {
+      @include responsive-small-phone {
+        &::before {
+          bottom: 5px;
+        }
+      }
+    }
+    h4 {
+      color: $gray2;
+      font-size: 2rem;
+      text-align: left;
+      margin-bottom: 2.5rem;
+      word-spacing: 2px;
+      span {
+        color: $gray2;
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: left;
+        span {
+          font-weight: 500;
+        }
+        @include responsive-small-phone {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    p {
+      margin: 1rem 0 3rem 0rem;
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: $gray2;
+      @include responsive-tablet {
+        font-size: 2.2rem;
+      }
+      @include responsive-desktop {
+        margin: 1rem 0 1.8rem 9.6rem;
+        font-size: 2rem;
+      }
+      @include responsive-desktop2 {
+        margin-left: 12rem;
+        margin-bottom: 4rem;
+        font-size: 2rem;
+      }
+    }
+    @include responsive-desktop {
+      
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+}
+
+.containerPriorityForm {
+  width: 85%;
+  @include responsive-small-phone {
+    padding-bottom: 4rem;
+  }
+  @include responsive-desktop {
+    margin: 0;
+    width: 45%;
+  }
+  div:nth-child(1) {
+    @include responsive-desktop {
+      margin-top: 2rem;
+    }
+  }
+  div:nth-child(2) {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 2.2rem;
+    @include responsive-desktop {
+      margin-bottom: 3rem;
+    }
+  }
+  div:nth-child(3) {
+    margin-bottom: 2.5rem;
+    @include responsive-small-phone {
+      margin-bottom: 1rem;
+    }
+  }
+  label {
+    @include responsive-small-phone {
+      margin-top: 1rem;
+    }
+    @include responsive-tablet {
+      margin-top: 25rem;
+    }
+  }
+}
+
+.contentFinsPriority {
+  @include flexbox-center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 20px;
+  div:nth-child(2) {
+    margin: 0;
+  }
+}
+
+.tree {
+  position: fixed;
+  width: 100%;
+  height: 700px;
+  z-index: -1;
+  object-fit: cover;
+  @include responsive-small-phone {
+    height: 450px;
+  }
+  @include responsive-tablet {
+    display: block;
+    height: 800px;
+    object-fit: fill;
+  }
+  @include responsive-desktop {
+    left: 350px;
+    height: 680px;
+    margin: 0% 4%;
+  }
+  @include responsive-desktop2 {
+    height: 810px;
+    margin: 0;
+  }
+}
+
+.plant {
+  display: none;
+  @include responsive-desktop {
+    display: block;
+    position: fixed;
+    width: 100%;
+    left: 500px;
+    top: 550px;
+    height: 180px;
+    z-index: -1;
+    object-fit: fill;
+    margin: 0% 4%;
+  }
+  @include responsive-desktop2 {
+    left: 600px;
+    top: 680px;
+    height: 180px;
+  }
+}

@@ -1,0 +1,63 @@
+
+@import "../../../assets/abstracts/mixins.scss";
+@import "../../../assets/abstracts/reset.scss";
+@import "../../../assets/abstracts/variables.scss";
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+  @include responsive-small-phone {
+    margin-bottom: 1rem;
+  }
+  label {
+    margin-bottom: 1rem;
+    margin-top: 2.2rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: $second-main-color;
+    @include responsive-small-phone {
+      font-size: 1.5rem;
+    }
+    @include responsive-tablet {
+      font-size: 3rem;
+      margin-top: 4.2rem;
+    }
+    @include responsive-desktop {
+      font-size: 2rem;
+      margin-top: 2.5rem;
+    }
+    @include responsive-desktop2 {
+      font-size: 2.3rem;
+      margin-top: 4rem;
+    }
+  }
+  select {
+    padding: 1.3rem 0;
+    border-radius: 9px;
+    background-color: transparent;
+    color: $gray4;
+    cursor: pointer;
+    border: 2px solid #9dc7a6;
+    font-size: 1.6rem;
+    padding: 1.3rem 1.3rem;
+    font-weight: 600;
+    &:focus {
+      outline: none;
+      background-color: $white3;
+      border: 2px solid $main-color;
+    }
+    @include responsive-small-phone {
+      padding: .5rem;
+    }
+    @include responsive-tablet {
+      font-size: 2.2rem;
+    }
+    @include responsive-desktop {
+      font-size: 1.6rem;
+    }
+    @include responsive-desktop2 {
+      font-size: 1.8rem;
+    }
+  }
+}

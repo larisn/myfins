@@ -1,0 +1,32 @@
+
+@import "../../../assets/abstracts/mixins.scss";
+@import "../../../assets/abstracts/reset.scss";
+@import "../../../assets/abstracts/variables.scss";
+
+
+.message {
+  width: 40%;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 2rem auto 0 auto;
+  @include responsive-desktop {
+    width: 30%;
+  }
+}
+
+.success {
+  color: #5c8d4e;
+  background-color: #ddf1d7;
+  border: 1px solid #b6d1ae;
+}
+
+.error {
+  color: #b63d3d;
+  background-color: #ffd7d7;
+  border: 1px solid #ffb6b6;
+}
