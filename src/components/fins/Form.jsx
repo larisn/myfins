@@ -12,7 +12,7 @@ export default function Form({ handleSubmit, btnText, finsData }) {
   const [fins, setFins] = useState(finsData || {})
 
   useEffect(() => {
-    fetch("https://json-server-larisn.vercel.app/categories", {
+    fetch("https://json-server-vercel-larisn.vercel.app/categories", {
       method: "GET",
       headers: {
         "Content-type": "application/json",

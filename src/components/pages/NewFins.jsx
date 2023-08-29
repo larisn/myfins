@@ -16,19 +16,19 @@ export default function NewFins() {
     fins.cost = 0
     fins.priorities = []
 
-    fetch("https://json-server-larisn.vercel.app/fins", {
+    fetch("https://json-server-vercel-larisn.vercel.app/fins", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
       body: JSON.stringify(fins),
     })
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data);
-        navigate("/myfins", {message: "Despesa inserida com sucesso!"});
-      })
-      .catch((err) => console.log(err));
+    .then((resp) => resp.json())
+    .then((data) => {
+      console.log(data);
+      navigate("/myfins", {message: "Despesa inserida com sucesso!"});
+    })
+    .catch((err) => console.log(err));
   }
   
   return (
