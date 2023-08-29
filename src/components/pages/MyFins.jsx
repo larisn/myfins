@@ -52,7 +52,7 @@ export default function Fins() {
         "Content-type": "application/json",
       },
     })
-      .then((resp) => resp.json())
+      // .then((resp) => resp.json())
       .then(() => {
         // excluir a despesa do id que está sendo deletado
         setFins(fins.filter((fins) => fins.id !== id));
