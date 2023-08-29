@@ -18,12 +18,12 @@ export default function Form({ handleSubmit, btnText, finsData }) {
         "Content-type": "application/json",
       },
     })
-      .then((resp) => resp.json()) // transforma dados da resposta em json
-      .then((data) => {
-        // dados do json no hook
-        setCategories(data);
-      })
-      .catch((err) => console.log(err));
+    .then((resp) => resp.json()) // transforma dados da resposta em json
+    .then((data) => {
+      // dados do json no hook
+      setCategories(data);
+    })
+    .catch((err) => console.log(err));
   }, [])
   
   const submit = (e) => {
@@ -82,5 +82,5 @@ export default function Form({ handleSubmit, btnText, finsData }) {
 Form.propTypes = {
   btnText: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  finsData: PropTypes.string
+  finsData: PropTypes.object
 };

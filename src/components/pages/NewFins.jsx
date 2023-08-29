@@ -23,7 +23,6 @@ export default function NewFins() {
       },
       body: JSON.stringify(fins),
     })
-    .then((resp) => resp.json())
     .then((data) => {
       console.log(data);
       navigate("/myfins", {message: "Despesa inserida com sucesso!"});
