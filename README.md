@@ -1,6 +1,6 @@
 
 <h1 align="center">
-<img src="https://github.com/larisn/my-fins/blob/main/src/assets/img/logo.svg" width="230px">
+<img src="https://github.com/larisn/myfins/blob/450e8a9968eae4dd57ff3f0d264f0b3db869c46b/src/assets/img/logo.svg" width="230px">
 </h1>
 <br>
 
@@ -8,7 +8,7 @@
 💸 Preview - Desktop
 </h3>
 
-![Preview](https://github.com/larisn/my-fins/blob/main/src/assets/img/preview-desktop.png)
+![Preview](https://github.com/larisn/myfins/blob/450e8a9968eae4dd57ff3f0d264f0b3db869c46b/src/assets/img/preview.png)
 <br>
 <br>
 
