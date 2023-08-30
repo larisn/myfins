@@ -31,7 +31,7 @@ export default function Fins() {
   useEffect(() => {
     setTimeout(() => {
       // simular um carregamento mais demorado para o loading aparecer
-      fetch(`https://json-server-vercel-larisn.vercel.app/categories/${id}`, {
+      fetch(`https://json-server-deploy.glitch.me/fins/${id}`, {
         method: "GET",
         headers: {
           "Content-type": "application/json",
@@ -80,7 +80,7 @@ export default function Fins() {
     fins.cost = newValue
 
     // update priority
-    fetch(`https://json-server-vercel-larisn.vercel.app/fins/${fins.id}`, {
+    fetch(`https://json-server-deploy.glitch.me/fins/${fins.id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
@@ -105,7 +105,7 @@ export default function Fins() {
       return false
     }
 
-    fetch(`https://json-server-vercel-larisn.vercel.app/fins/${fins.id}`, {
+    fetch(`https://json-server-deploy.glitch.me/fins/${fins.id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
@@ -134,7 +134,7 @@ export default function Fins() {
     finsUpdated.priorities = prioritiesUpdated
     finsUpdated.cost = parseFloat(finsUpdated.cost) - parseFloat(cost)
 
-    fetch(`https://json-server-vercel-larisn.vercel.app/fins/${finsUpdated.id}`, {
+    fetch(`https://json-server-deploy.glitch.me/fins/${finsUpdated.id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
@@ -146,6 +146,7 @@ export default function Fins() {
         setFins(finsUpdated);
         setPriority(prioritiesUpdated);
         setMessage("Prioridade removida com sucesso!");
+        setType("success");
       })
       .catch((err) => console.log(err));
   }

@@ -16,7 +16,7 @@ export default function NewFins() {
     fins.cost = 0
     fins.priorities = []
 
-    fetch("https://json-server-vercel-larisn.vercel.app/fins", {
+    fetch("https://json-server-deploy.glitch.me/fins", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

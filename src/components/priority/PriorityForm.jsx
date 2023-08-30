@@ -6,22 +6,12 @@ import SubmitButton from '../form/SubmitButton'
 
 
 export default function PriorityForm({ handleSubmit, btnText, finsData }) {
-  const [priority, setPriority] = useState({
-    name: "",
-    cost: "",
-    description: ""
-  });
+  const [priority, setPriority] = useState({});
 
   function submit(e) {
-    // manipular os dados da despesa adicionando prioridades
-    e.preventDefault()
-    const updatedPriorities = Array.isArray(finsData.priorities)
-      ? [...finsData.priorities, priority]
-      : [priority];
-
-    const updatedFinsData = { ...finsData, priorities: updatedPriorities };
-
-    handleSubmit(updatedFinsData);
+    e.preventDefault();
+    finsData.priorities.push(priority)
+    handleSubmit(finsData);
   }
 
   function handleChange(e) {
