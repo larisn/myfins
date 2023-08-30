@@ -217,7 +217,7 @@ export default function Fins() {
               </div>
 
               <div className={styles.contentFinsPriority}>
-                {priority && priority.length > 0 ? (
+                {priority.length > 0 && 
                   // para exibir as prioridades no projeto
                   priority.map((priorities) => (
                     <PriorityCard
@@ -229,9 +229,8 @@ export default function Fins() {
                       handleRemove={removePriority}
                     />
                   ))
-                ) : (
-                  <p>Não há prioridades cadastradas.</p>
-                )}
+                }
+                { priority.length === 0 && <p>Não há prioridades cadastradas.</p> }
               </div>
             </div>
           </div>
