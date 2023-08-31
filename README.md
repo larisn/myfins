@@ -49,7 +49,6 @@ Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 * JavaScript
 * JSON Server
 * Sass
-* React Reveal
 * Figma
 
 ---
